@@ -9,13 +9,22 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
+  <div class="mt-3 mb-3">
+  <center>
     <p class=" alert-success"  ><%= notice %></p>
-    <p class=" alert-danger"><%= alert %></p>
+    <p class=" alert-danger "><%= alert %></p>
     <% flash.each do |name, message| %>
-    <%= message %>
+    <% message %>
     <% end %>
+  </center>
+  </div>
+    <div>
+      <% if user_signed_in? %><br/>
+      <h13>User login with email ID</h13><br/>
+      <b><%= current_user.email %></b>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>
