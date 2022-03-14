@@ -1,0 +1,22 @@
+<div class="col-lg-6 mx-lg-auto">
+<div class="card shadow">
+<div class="card-header">
+<h2 class="card-title text-center", style="color:red;">Product Detials</h2>
+<center>
+  <div class="col-lg-7 mb-3 mt-3">
+    <div class="card" >
+      <div class="card-body">
+        <th><b><u>Product Name:</u></b></th><br/>
+        <td><%= @product.product_name %></th><br/>
+        <th><b><u>Price:</u></b></th><br/>
+        <td><%= @product.price %></th><br/>
+        <th><b><u>Description:</u></th></b><br/>
+        <td><%= @product.description %></th><br/>
+      </div>
+    </div>
+  </div>
+</center>
+</div>
+<center>
+  <td><%= button_to "Back ", products_path(@product),method: :get, class:"btn btn-primary float-right mb-3 mt-3"  %></td
+</center>
